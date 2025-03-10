@@ -2,10 +2,7 @@
 import { createContext, useEffect, useState } from 'react'
 import { dummyCourses } from '../assets/assets'
 import { useNavigate } from 'react-router-dom'
-<<<<<<< HEAD
 import humanizeDuration from 'humanize-duration';
-=======
->>>>>>> 4d464e553ff237d345ac283e6a7dd4e869a1f875
 
 
 export const AppContext = createContext()
@@ -38,7 +35,6 @@ const calculateRating = (course) =>{
         totalRating += rating.rating
     });
     return totalRating/course.courseRatings.length
-<<<<<<< HEAD
     }
     
     // Function to Calculate Course Chapter Time
@@ -72,21 +68,14 @@ const calculateRating = (course) =>{
         })
         return totalLectures;
     }
-=======
-}
->>>>>>> 4d464e553ff237d345ac283e6a7dd4e869a1f875
 
     useEffect(()=>{
         fetchAllCourses()
     },[])
 
     const value = {
-<<<<<<< HEAD
         currency, allCourses, navigate, calculateRating, isEducator, setIsEducator, calculateNoOfLectures,
         calculateCourseduration,calculateChapterTime
-=======
-        currency , allCourses, navigate, calculateRating, isEducator, setIsEducator
->>>>>>> 4d464e553ff237d345ac283e6a7dd4e869a1f875
     }
 
     return (

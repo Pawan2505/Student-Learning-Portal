@@ -3,10 +3,7 @@ import { useParams } from 'react-router-dom'
 import { AppContext } from '../../context/AppContext'
 import Loading from '../../components/student/Loading'
 import { assets } from '../../assets/assets';
-<<<<<<< HEAD
 import humanizeDuration from 'humanize-duration';
-=======
->>>>>>> 4d464e553ff237d345ac283e6a7dd4e869a1f875
 
 const CourseDetails = () => {
 
@@ -14,15 +11,10 @@ const { id } = useParams();
     
 
 const [courseData, setCourseData] = useState(null)
-<<<<<<< HEAD
 const [openSections, setOpenSections] = useState({})
   
 const {allCourses,calculateRating, calculateNoOfLectures,
         calculateCourseduration,calculateChapterTime} = useContext(AppContext)
-=======
-
-const {allCourses,calculateRating} = useContext(AppContext)
->>>>>>> 4d464e553ff237d345ac283e6a7dd4e869a1f875
 
 const fetchCourseData = async () =>{
 const findCourse = allCourses.find(course => course._id === id)
@@ -35,7 +27,6 @@ useEffect(() => {
 },[])
 
 
-<<<<<<< HEAD
   const toggleSection = (index) => {
     setOpenSections((prev) => (
       {
@@ -45,9 +36,6 @@ useEffect(() => {
 }
   
   
-=======
-
->>>>>>> 4d464e553ff237d345ac283e6a7dd4e869a1f875
   return courseData ? (
 
     <>
@@ -67,11 +55,7 @@ useEffect(() => {
 
     {/* review and rating */}
 
-<<<<<<< HEAD
       <div className='flex item-center space-x-2 pt-3 pb-1 text-sm'>
-=======
-      <div className='flex item-center space-x-2'>
->>>>>>> 4d464e553ff237d345ac283e6a7dd4e869a1f875
             <p>{calculateRating(courseData)}</p>
             <div className="flex">
                 {Array.from({ length: 5 }, (_, i) => (
@@ -88,7 +72,6 @@ useEffect(() => {
             <p>{courseData.enrolledStudents.length} {courseData.enrolledStudents.length > 1 ? 'students' : 'student'}</p>
           </div>
 
-<<<<<<< HEAD
           <p className='text-sm'>Course by <span className='text-blue-600 underline'>Pawan Maurya</span>  </p>
 
           
@@ -134,9 +117,6 @@ useEffect(() => {
       </div>
 
           </div>
-=======
-          
->>>>>>> 4d464e553ff237d345ac283e6a7dd4e869a1f875
 
         </div>
 
